@@ -82,4 +82,11 @@ VenmoView.isEnabled = function (options) {
   return Promise.resolve(btVenmo.isBrowserSupported(options.merchantConfiguration.venmo));
 };
 
+VenmoView.prototype.requestPaymentMethod = function () {
+  this.model.reportError('venmoButtonMustBeUsed');
+
+  return BaseView.prototype.requestPaymentMethod.call(this);
+};
+
+
 module.exports = VenmoView;
