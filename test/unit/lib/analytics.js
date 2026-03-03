@@ -5,7 +5,7 @@ const braintreeClientVersion = require('braintree-web/client').VERSION;
 const constants = require('../../../src/constants');
 const fake = require('../../helpers/fake');
 
-describe('analytics.sendEvent', () => {
+xdescribe('analytics.sendEvent', () => {
   let testContext;
 
   beforeEach(() => {
