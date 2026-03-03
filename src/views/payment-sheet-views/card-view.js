@@ -1,6 +1,6 @@
 'use strict';
 
-var assign = require('../../lib/assign').assign;
+// var assign = require('../../lib/assign').assign;
 var fs = require('fs');
 var BaseView = require('../base-view');
 var constants = require('../../constants');
@@ -241,7 +241,7 @@ CardView.prototype._generateHostedFieldsOptions = function () {
         return;
       }
 
-      assign(options.fields[field], overrides.fields[field], {
+      Object.assign(options.fields[field], overrides.fields[field], {
         selector: options.fields[field].selector
       });
     });
@@ -263,7 +263,7 @@ CardView.prototype._generateHostedFieldsOptions = function () {
       normalizeStyles(overrides.styles[style]);
       options.styles[style] = options.styles[style] || {};
 
-      assign(options.styles[style], overrides.styles[style]);
+      Object.assign(options.styles[style], overrides.styles[style]);
     });
   }
 

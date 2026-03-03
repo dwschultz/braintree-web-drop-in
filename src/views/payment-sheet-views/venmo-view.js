@@ -1,6 +1,6 @@
 'use strict';
 
-var assign = require('../../lib/assign').assign;
+// var assign = require('../../lib/assign').assign;
 var BaseView = require('../base-view');
 var btVenmo = require('braintree-web/venmo');
 var DropinError = require('../../lib/dropin-error');
@@ -16,7 +16,7 @@ VenmoView.ID = VenmoView.prototype.ID = paymentOptionIDs.venmo;
 
 VenmoView.prototype.initialize = function () {
   var self = this;
-  var venmoConfiguration = assign({}, self.model.merchantConfiguration.venmo, {client: this.client});
+  var venmoConfiguration = Object.assign({}, self.model.merchantConfiguration.venmo, {client: this.client});
 
   return btVenmo.create(venmoConfiguration).then(function (venmoInstance) {
     self.venmoInstance = venmoInstance;

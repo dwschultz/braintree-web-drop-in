@@ -1,7 +1,7 @@
 'use strict';
 
 var analytics = require('../../lib/analytics');
-var assign = require('../../lib/assign').assign;
+// var assign = require('../../lib/assign').assign;
 var browserDetection = require('../../lib/browser-detection');
 var BaseView = require('../base-view');
 var btPaypal = require('braintree-web/paypal-checkout');
@@ -31,7 +31,7 @@ BasePayPalView.prototype.initialize = function () {
   var paypalConfiguration = this.model.merchantConfiguration[paypalType];
   var dropinWrapperId = '#braintree--dropin__' + this.model.componentID;
 
-  this.paypalConfiguration = assign({}, paypalConfiguration);
+  this.paypalConfiguration = Object.assign({}, paypalConfiguration);
 
   asyncDependencyTimeoutHandler = setTimeout(function () {
     self.model.asyncDependencyFailed({

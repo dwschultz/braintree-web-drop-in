@@ -1,6 +1,6 @@
 'use strict';
 
-var assign = require('../../lib/assign').assign;
+// var assign = require('../../lib/assign').assign;
 var BaseView = require('../base-view');
 var btGooglePay = require('braintree-web/google-payment');
 var DropinError = require('../../lib/dropin-error');
@@ -20,11 +20,11 @@ GooglePayView.prototype.initialize = function () {
   var self = this;
   var buttonOptions, googlePayVersion, merchantId;
 
-  self.googlePayConfiguration = assign({}, self.model.merchantConfiguration.googlePay);
+  self.googlePayConfiguration = Object.assign({}, self.model.merchantConfiguration.googlePay);
   googlePayVersion = self.googlePayConfiguration.googlePayVersion;
   merchantId = self.googlePayConfiguration.merchantId;
 
-  buttonOptions = assign({
+  buttonOptions = Object.assign({
     buttonType: 'short'
   }, self.googlePayConfiguration.button, {
     onClick: function (event) {

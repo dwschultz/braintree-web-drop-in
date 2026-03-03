@@ -1,13 +1,13 @@
 'use strict';
 
-var assign = require('../lib/assign').assign;
+// var assign = require('../lib/assign').assign;
 var DropinError = require('../lib/dropin-error');
 var errors = require('../constants').errors;
 
 function BaseView(options) {
   options = options || {};
 
-  assign(this, options);
+  Object.assign(this, options);
 }
 
 BaseView.prototype.getElementById = function (id) {
