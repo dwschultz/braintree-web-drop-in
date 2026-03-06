@@ -1,6 +1,6 @@
 {
   "name": "braintree-web-drop-in",
-  "version": "1.46.0",
+  "version": "1.5.0",
   "main": "src/index.js",
   "private": true,
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/braintree/braintree-web-dropin.git"
+    "url": "git+https://github.com:dwschultz/braintree-web-drop-in.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -64,13 +64,13 @@
     "watchify": "^4.0.0"
   },
   "dependencies": {
-    "@braintree/asset-loader": "2.0.3",
-    "@braintree/browser-detection": "2.0.2",
+    "@braintree/asset-loader": "2.0.4",
+    "@braintree/browser-detection": "2.1.1",
     "@braintree/event-emitter": "0.4.1",
     "@braintree/uuid": "1.0.1",
     "@braintree/wrap-promise": "2.1.0",
     "baseline-browser-mapping": "^2.10.0",
-    "braintree-web": "3.123.2"
+    "braintree-web": "3.137.0"
   },
   "browserify": {
     "transform": [
