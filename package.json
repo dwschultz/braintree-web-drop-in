@@ -1,6 +1,6 @@
 {
-  "name": "braintree-web-drop-in",
-  "version": "1.5.0",
+  "name": "@hvacquick/braintree-web-drop-in",
+  "version": "1.47.0-hvq-0",
   "main": "src/index.js",
   "private": true,
   "scripts": {
